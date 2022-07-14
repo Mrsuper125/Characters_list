@@ -1,36 +1,26 @@
 package com.sanyacoder.characters_list
 
 import android.content.Intent
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 
-data class Character(val id: Int, val name: String, val species: String, val gender: String, val status: String)
+data class Character(val id: Int, val name: String, val species: String, val gender: String, val status: String, val motherland: String, val hamon: Boolean, val image: String)
 
 
 val characters = listOf(
     Character(
-        id = 0,
-        name = "Beth Smith",
-        species = "Human",
-        gender = "Female",
-        status = "Alive"
-    ),
-    Character(
-        id = 1,
-        name = "Squid Costume Morty",
-        species = "Robot",
-        gender = "Male",
-        status = "Dead"
-    ),
-    Character(
-        id = 2,
-        name = "Rick Sanchez",
-        species = "Human",
-        gender = "Male",
-        status = "Alive"
+        id = 5,
+        name = "Роберт Э.О. Спидвагон",
+        species = "Человек",
+        gender = "Мужской",
+        status = "Жив",
+        motherland = "Англия",
+        hamon = false,
+        image = "speedwagon"
     )
 )
 
@@ -62,6 +52,9 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("gender", found_character.gender)
             intent.putExtra("species", found_character.species)
             intent.putExtra("status", found_character.status)
+            intent.putExtra("motherland", found_character.gender)
+            intent.putExtra("hamon", found_character.species)
+            intent.putExtra("image", found_character.image)
             startActivity(intent)
         }
     }
