@@ -1,7 +1,6 @@
 package com.sanyacoder.characters_list
 
 import android.content.Intent
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -52,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("gender", found_character.gender)
             intent.putExtra("species", found_character.species)
             intent.putExtra("status", found_character.status)
-            intent.putExtra("motherland", found_character.gender)
+            intent.putExtra("motherland", found_character.motherland)
             intent.putExtra("hamon", found_character.species)
             intent.putExtra("image", found_character.image)
             startActivity(intent)
