@@ -38,10 +38,10 @@ class About_character : AppCompatActivity() {
         var hamon = intent.extras?.getBoolean("hamon")
 
         nameElement.text = name
-        genderElement.text = gender
-        speciesElement.text = species
-        statusElement.text = status
-        motherlandElement.text = motherland
-        hamonElement.text = (if (hamon!!) "Да" else "Нет")
+        genderElement.text = "Пол: $gender"
+        speciesElement.text = "Раса: $species"
+        statusElement.text = "Статус: $status"
+        motherlandElement.text = "Происхождение: $motherland"
+        hamonElement.text = ("Хамон: " + if (hamon!!) "Да" else "Нет")
     }
 }
