@@ -8,12 +8,65 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 
-data class Character(val id: Int, val name: String, val species: String, val gender: String, val status: String, val motherland: String, val hamon: Boolean, val image: String)
+data class Character(val name: String, val species: String, val gender: String, val status: String, val motherland: String, val hamon: Boolean, val image: String)
 
 
 val characters = listOf(
     Character(
-        id = 5,
+        name = "Джонатан Джостар",
+        species = "Человек",
+        gender = "Мужской",
+        status = "Мёртв",
+        motherland = "Англия",
+        hamon = true,
+        image = "jonathan"
+    ),
+    Character(
+        name = "Дио Брандо",
+        species = "Человек, позже вампир",
+        gender = "Мужской",
+        status = "Жив (признан мёртвым)",
+        motherland = "Англия",
+        hamon = false,
+        image = "dio"
+    ),
+    Character(
+        name = "Джордж Джостар I",
+        species = "Человек",
+        gender = "Мужской",
+        status = "Мёртв",
+        motherland = "Англия",
+        hamon = false,
+        image = "george"
+    ),
+    Character(
+        name = "Дарио Брадно",
+        species = "Человек",
+        gender = "Мужской",
+        status = "Мёртв",
+        motherland = "Англия",
+        hamon = false,
+        image = "dario"
+    ),
+    Character(
+        name = "Эрина Пендлтон/Джостар",
+        species = "Человек",
+        gender = "Женский",
+        status = "Жива",
+        motherland = "Англия",
+        hamon = false,
+        image = "erina"
+    ),
+    Character(
+        name = "Дэнни",
+        species = "Собака",
+        gender = "Мужской",
+        status = "Мёртв",
+        motherland = "Англия",
+        hamon = false,
+        image = "danny"
+    ),
+    Character(
         name = "Роберт Э.О. Спидвагон",
         species = "Человек",
         gender = "Мужской",
@@ -21,7 +74,79 @@ val characters = listOf(
         motherland = "Англия",
         hamon = false,
         image = "speedwagon"
-    )
+    ),
+    Character(
+        name = "Джэк - потрошитель",
+        species = "Человек, позже зомби",
+        gender = "Мужской",
+        status = "Мёртв",
+        motherland = "Англия",
+        hamon = false,
+        image = "jack"
+    ),
+    Character(
+        name = "Уилл А. Цеппели",
+        species = "Человек",
+        gender = "Мужской",
+        status = "Мёртв",
+        motherland = "Англия",
+        hamon = true,
+        image = "ceppeli"
+    ),
+    Character(
+        name = "Тонпетти",
+        species = "Человек",
+        gender = "Мужской",
+        status = "Неизвестен",
+        motherland = "Тибет",
+        hamon = true,
+        image = "tonpetti"
+    ),
+    Character(
+        name = "Стрейтс",
+        species = "Человек",
+        gender = "Мужской",
+        status = "Жив",
+        motherland = "Тибет",
+        hamon = true,
+        image = "straits"
+    ),
+    Character(
+        name = "Дайр",
+        species = "Человек",
+        gender = "Мужской",
+        status = "Мёртв",
+        motherland = "Тибет",
+        hamon = true,
+        image = "dire"
+    ),
+    Character(
+        name = "Ван Чен",
+        species = "Человек, позже зомби",
+        gender = "Мужской",
+        status = "Жив",
+        motherland = "Китай",
+        hamon = false,
+        image = "wang_chang"
+    ),
+    Character(
+        name = "Поко",
+        species = "Человек",
+        gender = "Мужской",
+        status = "Жив",
+        motherland = "АНглия",
+        hamon = false,
+        image = "poco"
+    ),
+    Character(
+        name = "Бруфорд",
+        species = "Человек, похже зомби, позже снова человек",
+        gender = "Мужской",
+        status = "Мёртв",
+        motherland = "Англия",
+        hamon = false,
+        image = "bruford"
+    ),
 )
 
 fun search_for_characters(keyWord:String) : List<Character>{
@@ -52,8 +177,8 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("gender", found_character.gender)
             intent.putExtra("species", found_character.species)
             intent.putExtra("status", found_character.status)
-            intent.putExtra("motherland", found_character.gender)
-            intent.putExtra("hamon", found_character.species)
+            intent.putExtra("motherland", found_character.motherland)
+            intent.putExtra("hamon", found_character.hamon)
             intent.putExtra("image", found_character.image)
             startActivity(intent)
         }
