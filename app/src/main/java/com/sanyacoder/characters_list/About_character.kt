@@ -1,6 +1,5 @@
 package com.sanyacoder.characters_list
 
-import android.content.Context
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
