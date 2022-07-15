@@ -134,18 +134,45 @@ val characters = listOf(
         species = "Человек",
         gender = "Мужской",
         status = "Жив",
-        motherland = "АНглия",
+        motherland = "Англия",
         hamon = false,
         image = "poco"
     ),
     Character(
         name = "Бруфорд",
-        species = "Человек, похже зомби, позже снова человек",
+        species = "Человек, позже зомби, позже снова человек",
         gender = "Мужской",
         status = "Мёртв",
         motherland = "Англия",
         hamon = false,
         image = "bruford"
+    ),
+    Character(
+        name = "Таркус",
+        species = "Человек, позже зомби",
+        gender = "Мужской",
+        status = "Мёртв",
+        motherland = "Англия",
+        hamon = false,
+        image = "tarkus"
+    ),
+    Character(
+        name = "Сестра Поко",
+        species = "Человек",
+        gender = "Женский",
+        status = "Жива",
+        motherland = "Англия",
+        hamon = false,
+        image = "poco_sister"
+    ),
+    Character(
+        name = "Неизвестный ребёнок (позже Лиза Лиза)",
+        species = "Человек",
+        gender = "Женский",
+        status = "Жива",
+        motherland = "Англия",
+        hamon = false,
+        image = "lisalisa"
     ),
 )
 
