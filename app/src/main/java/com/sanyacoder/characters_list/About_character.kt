@@ -29,12 +29,12 @@ class About_character : AppCompatActivity() {
 
         image.setImageResource(image.context.resources.getIdentifier(intent.extras?.getString("image"), "drawable", image.context.packageName))
 
-        var name = intent.extras?.getString("name")
-        var gender = intent.extras?.getString("gender")
-        var species = intent.extras?.getString("species")
-        var status = intent.extras?.getString("status")
-        var motherland = intent.extras?.getString("motherland")
-        var hamon = intent.extras?.getBoolean("hamon")
+        val name = intent.extras?.getString("name")
+        val gender = intent.extras?.getString("gender")
+        val species = intent.extras?.getString("species")
+        val status = intent.extras?.getString("status")
+        val motherland = intent.extras?.getString("motherland")
+        val hamon = intent.extras?.getBoolean("hamon")
 
         nameElement.text = name
         genderElement.text = "Пол: $gender"

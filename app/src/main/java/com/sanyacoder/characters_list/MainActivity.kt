@@ -1,7 +1,6 @@
 package com.sanyacoder.characters_list
 
 import android.content.Intent
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -196,7 +195,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var found_characters : List<Character>
 
-    fun refresh(found_character : Character){
+    private fun refresh(found_character : Character){
         search_result.text = found_character.name
         search_result.setOnClickListener{
             val intent = Intent(this@MainActivity, About_character::class.java)
